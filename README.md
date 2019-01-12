@@ -6,6 +6,11 @@ Get clusterRole which has define the specified resource.
 
 Just run the `build.sh`.
 
+## donwload
+
+- [Mac版](https://silenceshell-1255345740.cos.ap-shanghai.myqcloud.com/kube-role-finder)
+- [Linux版](https://silenceshell-1255345740.cos.ap-shanghai.myqcloud.com/kube-role-finder-linux)
+
 ## usage
 
 ### find all clusterRole which has defined resource `services`
