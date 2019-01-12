@@ -113,7 +113,9 @@ func printRoles(array []string) {
 		} else {
 			var pad string
 			if i % 2 == 1 {
-				pad = fmt.Sprintf(fmt.Sprintf("%%%ds", base), " ")
+				if (total + base) <= width {
+					pad = fmt.Sprintf(fmt.Sprintf("%%%ds", base), " ")
+				}
 			}
 			base += base
 			f += fmt.Sprintf(pad+"%%-%ds", base)
