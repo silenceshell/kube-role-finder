@@ -172,6 +172,10 @@ func main() {
 
 	clusterRolesNames := make([]string, 0)
 	clusterRoles, err := clientset.RbacV1().ClusterRoles().List(metav1.ListOptions{})
+	if err  != nil {
+		fmt.Println(err)
+		return
+	}
 	for _, clusterRole := range clusterRoles.Items {
 		if hasRule(clusterRole, apiGroup, resource, verb) {
 			clusterRolesNames = append(clusterRolesNames, clusterRole.Name)
@@ -182,7 +186,7 @@ func main() {
 		fmt.Printf("Those clusterRole has resource %s:\n", resource)
 		printRoles(clusterRolesNames)
 	} else {
-		fmt.Printf("No clusterRole has resource %s.", resource)
+		fmt.Printf("No clusterRole has resource %s.\n", resource)
 	}
 }
 

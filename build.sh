@@ -1,3 +1,3 @@
 #!/bin/bash
 
-GO111MODULE=off go build
+GOPATH=/home/bottle/Code/Go/ GO111MODULE=off go build
